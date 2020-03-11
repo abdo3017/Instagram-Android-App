@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:label="My new title"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.CommentsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/contentRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:elevation="@dimen/default_elevation"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvComments"
+                android:layout_marginTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/shadow_top" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llAddComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_comments"
+            android:elevation="@dimen/default_elevation"
+            android:gravity="center_vertical"
+            android:paddingLeft="6dp"
+            android:paddingTop="6dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="4dp">
+
+            <EditText
+                android:id="@+id/etComment"
+                style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="Add a comment..."
+                android:textColor="#555555"
+                android:textSize="14sp" />
+
+            <com.example.instaapp.ui.view.SendCommentButton
+                android:id="@+id/btnSendComment"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/home_background_oval"
+                android:elevation="4dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

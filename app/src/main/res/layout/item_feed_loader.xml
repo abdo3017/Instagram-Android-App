@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?><!-- item_feed.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="4dp"
+    android:layout_gravity="center"
+    android:layout_marginBottom="6dp"
+    android:layout_marginTop="12dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:orientation="horizontal">
+
+            <com.jackandphantom.circularimageview.CircleImage
+                android:id="@+id/item_post_user_img"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="6dp"
+                />
+
+            <TextView
+                android:id="@+id/item_post_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0.7"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center_horizontal|left"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+        <com.example.instaapp.ui.view.SquaredFrameLayout
+            android:id="@+id/vImageRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_post_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:id="@+id/vBgLike"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_like_circle_background"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_heart_outline_white"
+                android:visibility="invisible" />
+
+        </com.example.instaapp.ui.view.SquaredFrameLayout>
+
+        <ImageView
+            android:id="@+id/ivFeedBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="1.0">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/item_post_btn_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_heart_outline_grey" />
+
+                    <TextSwitcher
+                        android:id="@+id/tsLikesCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:inAnimation="@anim/slide_in_likes_counter"
+                        android:outAnimation="@anim/slide_out_likes_counter">
+
+                        <TextView
+                            android:id="@+id/item_post_likes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="0 likes"
+                            android:textColor="@android:color/background_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_like_counter" />
+                    </TextSwitcher>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/item_post_btn_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginBottom="2dp"
+                        android:background="@drawable/btn_feed_action"
+                        android:src="@drawable/ic_comment_outline_grey" />
+
+                    <TextSwitcher
+                        android:id="@+id/tsCommentsCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:inAnimation="@anim/slide_in_likes_counter"
+                        android:outAnimation="@anim/slide_out_likes_counter">
+
+                        <TextView
+                            android:id="@+id/item_post_comments"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="0 Comments"
+                            android:textColor="@android:color/background_dark" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_like_counter" />
+                    </TextSwitcher>
+
+                </LinearLayout>
+                <ImageButton
+                    android:id="@+id/item_post_btn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_feed_action"
+                    android:src="@drawable/telegram"
+                    card_view:layout_constraintStart_toEndOf="@+id/linearLayout2"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/item_post_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/btn_feed_action"
+                android:src="@drawable/ic_delete"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/item_post_btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/btn_feed_action"
+                android:src="@drawable/ic_edit"
+                card_view:layout_constraintEnd_toStartOf="@+id/item_post_btn_delete"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/item_post_disc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@android:color/background_dark"
+
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

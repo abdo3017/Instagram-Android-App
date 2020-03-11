@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SIGN_UP">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:scaleType="fitXY"
+        android:src="@drawable/signup"
+        />
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="InvalidId,MissingConstraints"
+        >
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+
+                <RelativeLayout
+                    android:id="@+id/R3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintLeft_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/IMAGE_SIGN_UP"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="135dp"
+                            android:src="@drawable/user" />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginTop="230dp"
+                            android:background="@color/White"
+                            android:onClick="Btn_GetImage"
+                            android:src="@drawable/ic_image_black_24dp" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                /////
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="vertical">
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:id="@+id/NAME"
+                                android:layout_height="wrap_content"
+                                android:hint="Name" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/EMAIL"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:hint="Email" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:ems="10"
+                                    android:layout_height="match_parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/PASSWORD"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="13dp"
+                                        android:layout_weight="1"
+                                        android:ems="10"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:textSize="20dp"
+                                        android:textAllCaps="false"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/password"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="SHOW_PASSWORD"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="10dp"
+
+                                    ></ImageView>
+
+
+
+                            </RelativeLayout>
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:ems="10"
+                                    android:layout_height="match_parent">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/CONFIRMPASSWORD"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="13dp"
+                                        android:layout_weight="1"
+                                        android:ems="10"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="20dp"
+                                        android:hint="Password"
+                                        android:inputType="textPassword"
+                                        android:textSize="20dp"
+                                        android:textAllCaps="false"/>
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/password"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="SHOW_PASSWORD2"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="10dp"
+
+                                    ></ImageView>
+
+
+
+                            </RelativeLayout>
+                        </FrameLayout>
+
+
+
+
+                        <Button
+                            android:id="@+id/SIGN_UP"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:onClick="Sign_Up"
+                            android:background="@drawable/backgroundbuttons"
+                            android:padding="15dp"
+                            android:text="Sign up"
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintVertical_bias="0.19999999" />
+
+                        <Button
+                            android:id="@+id/BACK_TO_SIGN_IN"
+                            android:layout_width="300dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="50dp"
+                            android:onClick="BACK_TO_SIGN_IN"
+                            android:background="@drawable/backgroundbuttons"
+                            android:padding="15dp"
+                            android:text="back to sign in "
+                            android:textColor="@color/Black"
+                            android:textSize="18sp"
+                            android:textStyle="normal"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintVertical_bias="0.19999999" />
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
